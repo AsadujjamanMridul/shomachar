@@ -1,10 +1,32 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { Component, useEffect, useState } from 'react';
+import { Container, Content, List } from 'native-base';
+import { StyleSheet, Linking } from 'react-native'
+import { getArticles } from '../../service/news'
+import ArticleCard from '../../components/ArticleCard';
+
 
 export default function Technology() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        getArticles('technology').then(data => {
+            setData(data);
+        })
+    }, [])
+
+    const handleDetailsButton = (articleData) => {
+        Linking.openURL(articleData.url);
+    }
+
     return (
-        <View>
-            <Text></Text>
-        </View>
+        <Container>
+            <Content>
+                <List>
+                    {
+                        data?.map(article => <ArticleCard key={article.id} data={article} handleDetailsButton={handleDetailsButton} />)
+                    }
+                </List>
+            </Content>
+        </Container>
     )
 }
