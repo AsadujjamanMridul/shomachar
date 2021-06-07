@@ -1,6 +1,6 @@
 # Shomachar
 
-This a hybrid app for checking latest news from all over the world. It has been built using the NewsApi. Shomachar contains news about general topic, business, health, entertainment, science, technology and sports. You can see the source and time it was published. Pressing Details button, you will be redirect to the official news website. And use the Share button to share the news according to your demand.
+This is a hybrid app for checking latest news from all over the world. It has been built using the NewsApi. Shomachar contains news about general topic, business, health, entertainment, science, technology and sports. You can see the source and time it was published. Pressing Details button, you will be redirect to the official news website. And use the Share button to share the news according to your demand.
 
 ## Features
 
